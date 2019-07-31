@@ -1,0 +1,53 @@
+
+<div class="form-wrap row center-xs middle-xs">
+  <h2 class="col-xs-12">Ingresar datos del nuevo Usuario</h2>
+  <form #form="ngForm" class="form row col-xs-10">
+    <div class="form-group col-xs-12 row start-xs">
+
+      <input [(ngModel)]="user.names" #name="ngModel"  type="text" name="names" required pattern="[a-zA-Z ]*" minlength="3">
+      <label for="names">Nombres:</label>
+      <div class="error" *ngIf="name.touched && !name.valid">
+        <div *ngIf="name.errors.required">Nombre requerido</div>
+        <div *ngIf="name.errors.minlength">Mínimo 3 letras</div>
+        <div *ngIf="name.errors.pattern">Solo letras</div>
+      </div>
+    </div>
+
+    <div class="form-group col-xs-12 row start-xs">
+      <input [(ngModel)]="user.surnames" #surname="ngModel" type="text" name="surnames" required pattern="[a-zA-Z ]*" minlength="2">
+      <label for="surnames">Apellidos:</label>
+      <div class="error" *ngIf="surname.touched && !surname.valid">
+        <div *ngIf="surname.errors.required">Apellido requerido</div>
+        <div *ngIf="surname.errors.minlength">Mínimo 2 letras</div>
+        <div *ngIf="surname.errors.pattern">Solo letras</div>
+      </div>
+    </div>
+    <div class="form-group col-xs-12 row start-xs">
+      <input [(ngModel)]="user.identification" #identification="ngModel" type="text" name="identification" required pattern="[0-9]*" minlength="6">
+      <label for="identification">Cédula:</label>
+      <div class="error" *ngIf="identification.touched && !identification.valid">
+          <div *ngIf="identification.errors.required">Cédula requerida</div>
+        <div *ngIf="identification.errors.minlength">Identificación inválida (mínimo {{identification.errors.minlength.requiredLength}} números)</div>
+        <div *ngIf="identification.errors.pattern">Solo números</div>
+      </div>
+    </div>
+    <div class="form-group col-xs-12 row start-xs">
+      <input [(ngModel)]="user.email" #email="ngModel" type="text" name="email" required pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}">
+      <label for="email">Correo electrónico:</label>
+      <div class="error" *ngIf="email.touched && !email.valid">
+          <div *ngIf="email.errors.required">Email requerido</div>
+        <div *ngIf="email.errors.pattern">Formato de correo incorrecto</div>
+      </div>
+    </div>
+    <div class="form-group col-xs-12 row start-xs">
+      <input [(ngModel)]="user.phone" #phone="ngModel" type="text" name="phone" required pattern="[0-9]*" minlength="7">
+      <label for="phone">Teléfono:</label>
+      <div class="error" *ngIf="phone.touched && !phone.valid">
+          <div *ngIf="phone.errors.required">Teléfono requerido</div>
+        <div *ngIf="phone.errors.minlength">Número telefónico incorrecto (mínimo {{phone.errors.minlength.requiredLength}} números)</div>
+        <div *ngIf="phone.errors.pattern">Solo números</div>
+      </div>
+    </div>
+    <button class="btn-send normal-text" (click)="saveUser(form)">Guardar</button>
+  </form>
+</div>

@@ -1,0 +1,29 @@
+<div class="table-wrap row">
+  <table class="col-xs-12">
+    <tr>
+      <th class="">ID</th>
+      <th class="">Nombres</th>
+      <th class="">Apellidos</th>
+      <th class="">Cédula</th>
+      <th class="">Correo</th>
+      <th class="">Teléfono</th>
+      <th class="">Opciones</th>
+    </tr>
+    <tr *ngFor="let user of users">
+      <td class="">{{ user.id }}</td>
+      <td class="">{{ user.names }}</td>
+      <td class="">{{ user.surnames }}</td>
+      <td class="">{{ user.identification }}</td>
+      <td class="">{{ user.email }}</td>
+      <td class="">{{ user.phone }}</td>
+      <td>
+        <table class="row center-xs middle-xs">
+          <tr>
+            <td><a class="btn btn-green" routerLink="/form/{{user.id}}">Ver/Editar</a></td>
+            <td><a class="btn btn-red" (click)="delete(user.id)">Eliminar</a></td>
+          </tr>
+        </table>
+      </td>
+    </tr>
+  </table>
+</div>

@@ -1,0 +1,24 @@
+.table-wrap{
+  background-color: #fff;
+  margin: 30px 0;
+  box-shadow: 0 14px 28px rgba(0,0,0,0.15), 0 10px 10px rgba(0,0,0,0.12);
+  padding-bottom: 15px;
+  overflow-x: auto;
+  table{
+    tr{
+      margin: 0;
+      th{
+        color: #fff;
+        background-color: #ee6e73;
+        padding: 5px 15px;
+        text-align: center;
+        font-size: 0.85em;
+      }
+      td{
+        text-align: center;
+        padding: 5px 0;
+        font-size: 0.75rem;
+      }
+    }
+  }
+}
