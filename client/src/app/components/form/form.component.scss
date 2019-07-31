@@ -1,0 +1,98 @@
+.form-wrap{
+  background-color: #fff;
+  padding: 0px;
+  margin: 30px 0;
+  box-shadow: 0 14px 18px rgba(0,0,0,0.15), 0 10px 10px rgba(0,0,0,0.12);
+  width: 60vw;
+  margin: 30px auto;
+  @media (max-width: 678px) {
+    width: 80vw;
+  }
+  @media (max-width: 400px) {
+    width: 90vw;
+  }
+  h2{
+    color: #fff;
+    background-color: #ee6e73;
+    padding: 15px 30px;
+    text-align: center;
+    font-size: 1.2rem;
+  }
+  form.form{
+    margin: 30px 0;
+    .form-group {
+      position: relative;
+      margin: 15px 0 5px;
+      input{
+        height: 1.9rem;
+        display: block;
+        background: none;
+        padding: 1.2em 0.25em;
+        font-size: 1rem;
+        border-width: 0;
+        border-color: transparent;
+        line-height: 1.9;
+        width: 100%;
+        color: #666;
+        -webkit-transition: all 0.28s ease;
+        transition: all 0.28s ease;
+        box-shadow: none;
+        outline: none;
+        border-bottom: 1px #bbdfff solid;
+        &:focus ~ label{
+          font-size: 0.8rem;
+          color: gray;
+          top: -1rem;
+          left: 0;
+        }
+        &:valid ~ label{
+          font-size: 0.8rem;
+          color: gray;
+          top: -1rem;
+          left: 0;
+        }
+        &:focus{
+          border-bottom: 1px #26a69a solid;
+        }
+      }
+      label{
+        position: absolute;
+        top: 0.25rem;
+        pointer-events: none;
+        padding-left: 0.125rem;
+        z-index: 1;
+        color: #b3b3b3;
+        font-size: 1rem;
+        font-weight: normal;
+        -webkit-transition: all 0.28s ease;
+        transition: all 0.28s ease;
+      }
+      .error {
+        font-size: 0.75rem;
+        border: 1px #F44336 solid;
+        background-color: rgb(245, 131, 122);
+        color: #fff;
+        margin: 0 0 15px 0;
+        padding: 2px 15px;
+      }
+    }
+    .btn-send{
+      position: relative;
+      background: #4f93ce;
+      border: 1px solid #4f93ce;
+      font-size: 1rem;
+      color: #fff;
+      margin: 2rem 0 1rem;
+      padding: 0.45rem 3rem;
+      cursor: pointer;
+      -webkit-transition: background-color 0.28s ease, color 0.28s ease, box-shadow 0.28s ease;
+      transition: background-color 0.28s ease, color 0.28s ease, box-shadow 0.28s ease;
+      overflow: hidden;
+      box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.14), 0 3px 1px -2px rgba(0, 0, 0, 0.2), 0 1px 5px 0 rgba(0, 0, 0, 0.12);
+      width: 100%;
+      &:hover{
+        box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);
+      }
+    }
+  }
+}
