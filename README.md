@@ -14,7 +14,8 @@ Para la ejecución del api es necesario:
 
 ### CLIENTE ANGULAR (client)
 
-Solamente es necesario ejecutar un servidor con la carpeta **dist**
+Solamente es necesario ejecutar un servidor con la carpeta **dist**, para generarla es necesario tener Angular instalado de forma global con todos los requisitos
+necesarios, despues ejecutar el comando **ng build --prod=true**
 ##### Directorio
 * client
   - **dist**
